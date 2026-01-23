@@ -12,16 +12,17 @@ import sys
 import os
 import gc
 import json
+import time
 from datetime import datetime, timedelta, date
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 from config import COURTS
 from security import get_credentials, setup_keyring
 from auth import auto_login
-from calendar_parser import (find_gaps, find_badminton_events, print_gaps, 
-                           print_badminton, format_hour, click_next_week, parse_date)
+from calendar_parser import (scrape_calendar_data, format_hour, click_next_week, parse_date)
 
 # Detect CI environment
 IS_CI = os.getenv("CI") == "true"
@@ -64,7 +65,6 @@ def save_results_json(all_gaps, all_badminton):
         output["courts"][court_name] = court_data
     
     # Add badminton events - Sort by date
-    # badminton events have 'date_str'
     all_badminton.sort(key=lambda x: x['date']) # parsed date object
     
     for event in all_badminton:
@@ -108,11 +108,10 @@ def main():
         setup_keyring()
         return
     
-    print("=" * 60)
+    # Minimal status output
     print("  ERIE HALL COURT GAP FINDER")
     if IS_CI:
         print("  (Running in GitHub Actions)")
-    print("=" * 60)
     
     # Load credentials
     username, password, totp_secret = get_credentials()
@@ -123,16 +122,18 @@ def main():
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--log-level=3")  # Suppress Chrome logs
     
     if IS_CI:
         options.add_argument("--headless")
-        print("  Running in headless mode")
     
     if IS_CI:
         service = Service()
         driver = webdriver.Chrome(service=service, options=options)
     else:
-        driver = webdriver.Chrome(options=options)
+        # Use webdriver_manager handles driver verification/installation locally
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
     
     all_gaps = {}
     all_badminton = []
@@ -140,12 +141,9 @@ def main():
     # Define our target window: Today + 6 days
     today = datetime.now().date()
     end_date = today + timedelta(days=6)
-    print(f"\nTarget Window: {today.strftime('%a %b %d')} to {end_date.strftime('%a %b %d')}")
     
     try:
         first_url = list(COURTS.values())[0]
-        print(f"\nOpening: {first_url}")
-        
         login_success = auto_login(driver, first_url, username, password, totp_secret)
         
         # Clear credentials
@@ -159,35 +157,34 @@ def main():
                 print("ERROR: Auto-login failed in CI mode")
                 sys.exit(1)
             else:
-                print("\n" + "-" * 60)
-                print("  AUTO-LOGIN FAILED OR NOT CONFIGURED")
-                input("Press ENTER to continue manually...")
+                print("\n  AUTO-LOGIN FAILED - Please log in manually.")
+                input("Press ENTER after login...")
         
-        print("\nScanning courts for available slots (Checking current + next week)...")
-        print("-" * 60)
+        print(f"\nScanning courts ({today.strftime('%b %d')} - {end_date.strftime('%b %d')})...")
 
         for court_name, url in COURTS.items():
-            print(f"\nChecking {court_name}...")
+            print(f"  Checking {court_name}...")
             driver.get(url)
+            time.sleep(3) # Explicit wait for page load
             
-            # 1. Scrape current view (Week 1)
-            print("  Scraping current week...")
-            gaps_week1 = find_gaps(driver, court_name)
-            badminton_week1 = find_badminton_events(driver)
+            # 1. Scrape current week
+            gaps_week1, badminton_week1 = scrape_calendar_data(driver)
             
-            # 2. Click Next and Scrape (Week 2) to ensure coverage
-            # We do this blindly to ensure we catch the cross-week boundary
+            # Robust check for Week 1 data
+            if not gaps_week1 and not badminton_week1:
+                # Retry once if empty
+                print("    ...Retrying scrape for current week...")
+                driver.refresh()
+                time.sleep(5)
+                gaps_week1, badminton_week1 = scrape_calendar_data(driver)
+            
+            # 2. Click Next and Scrape (Week 2)
             week2_success = click_next_week(driver)
-            
             gaps_week2 = {}
             badminton_week2 = []
             
             if week2_success:
-                print("  Scraping next week...")
-                gaps_week2 = find_gaps(driver, court_name)
-                badminton_week2 = find_badminton_events(driver)
-            else:
-                print("  (Could not navigate to next week, using only current view)")
+                gaps_week2, badminton_week2 = scrape_calendar_data(driver)
             
             # 3. Merge results
             merged_gaps = {**gaps_week1, **gaps_week2}
@@ -203,37 +200,22 @@ def main():
                 if e['date'] and today <= e['date'] <= end_date
             ]
             
-            # Allow duplicates? Maybe. But let's dedup by name+date just in case
-            # (If click next didn't actually move, we might see same events)
-            unique_badminton = []
+            # Dedup badminton events
             seen = set()
             for e in filtered_badminton:
                 key = (e['name'], e['date_str'], e['start'])
                 if key not in seen:
                     seen.add(key)
-                    # Add court info
                     e['court'] = court_name
-                    unique_badminton.append(e)
-            
-            all_badminton.extend(unique_badminton)
-            
-            print_gaps(court_name, filtered_gaps)
+                    all_badminton.extend([e])
         
-        print_badminton(all_badminton)
         save_results_json(all_gaps, all_badminton)
         
-        print("\n" + "=" * 60)
-        print("  SCAN COMPLETE!")
-        print("=" * 60)
-        
         if not IS_CI:
-            print("\nScan execution finished.")
-            # print("\nPress Enter to close browser...")
-            # input()
+            print("Scan finished.")
 
     finally:
         driver.quit()
-        print("Browser closed.")
         gc.collect()
 
 

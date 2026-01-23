@@ -1,3 +1,5 @@
 selenium
 python-dotenv
 pyotp
+keyring
+webdriver-manager

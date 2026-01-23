@@ -1,5 +1,9 @@
 name: Check Court Availability
 
+
+permissions:
+  contents: write
+
 on:
   schedule:
     # Run daily at 8 AM EST (1 PM UTC)

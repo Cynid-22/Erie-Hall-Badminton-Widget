@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-23T04:09:45.249644Z",
+  "last_updated": "2026-01-23T04:24:24.623362Z",
   "courts": {
     "Court 1": [
       {
@@ -140,6 +140,46 @@
     ],
     "Court 2": [
       {
+        "date": "Thu Jan 22 2026",
+        "slots": [
+          {
+            "start": "6AM",
+            "end": "10AM",
+            "duration_hours": 4.0
+          },
+          {
+            "start": "8PM",
+            "end": "11PM",
+            "duration_hours": 3.0
+          }
+        ]
+      },
+      {
+        "date": "Fri Jan 23 2026",
+        "slots": [
+          {
+            "start": "6AM",
+            "end": "4:45PM",
+            "duration_hours": 10.8
+          },
+          {
+            "start": "6:45PM",
+            "end": "10PM",
+            "duration_hours": 3.2
+          }
+        ]
+      },
+      {
+        "date": "Sat Jan 24 2026",
+        "slots": [
+          {
+            "start": "2PM",
+            "end": "10PM",
+            "duration_hours": 8.0
+          }
+        ]
+      },
+      {
         "date": "Sun Jan 25 2026",
         "slots": [
           {
@@ -154,18 +194,8 @@
         "slots": [
           {
             "start": "6AM",
-            "end": "9:05AM",
-            "duration_hours": 3.1
-          },
-          {
-            "start": "9:54AM",
-            "end": "11:15AM",
-            "duration_hours": 1.3
-          },
-          {
-            "start": "12:05PM",
             "end": "4:45PM",
-            "duration_hours": 4.7
+            "duration_hours": 10.8
           },
           {
             "start": "6:45PM",
@@ -179,13 +209,8 @@
         "slots": [
           {
             "start": "8AM",
-            "end": "9:05AM",
-            "duration_hours": 1.1
-          },
-          {
-            "start": "10:20AM",
             "end": "3:30PM",
-            "duration_hours": 5.2
+            "duration_hours": 7.5
           },
           {
             "start": "8PM",
@@ -199,23 +224,18 @@
         "slots": [
           {
             "start": "6AM",
-            "end": "9:05AM",
-            "duration_hours": 3.1
-          },
-          {
-            "start": "9:54AM",
-            "end": "11:15AM",
-            "duration_hours": 1.3
-          },
-          {
-            "start": "12:05PM",
             "end": "2:30PM",
-            "duration_hours": 2.4
+            "duration_hours": 8.5
           },
           {
             "start": "4:15PM",
             "end": "5:15PM",
             "duration_hours": 1.0
+          },
+          {
+            "start": "9PM",
+            "end": "11PM",
+            "duration_hours": 2.0
           }
         ]
       }
