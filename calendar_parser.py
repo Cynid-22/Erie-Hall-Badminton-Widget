@@ -57,12 +57,7 @@ def format_hour(hour):
     """Convert hour float to readable time string"""
     h = int(hour)
     m = int((hour - h) * 60)
-    period = 'AM' if h < 12 else 'PM'
-    if h > 12:
-        h -= 12
-    elif h == 0:
-        h = 12
-    return f"{h}:{m:02d}{period}" if m > 0 else f"{h}{period}"
+    return f"{h:02d}:{m:02d}"
 
 
 def click_next_week(driver):

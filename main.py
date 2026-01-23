@@ -85,8 +85,12 @@ def save_results_json(all_gaps, all_badminton):
                     "note": item.get('note', "Open")
                 })
                 
+            # Format date as "Sun, 25-Jan"
+            d_obj = parse_date(date_str)
+            formatted_date = d_obj.strftime("%a, %d-%b") if d_obj else date_str
+            
             day_data = {
-                "date": date_str,
+                "date": formatted_date,
                 "slots": slots_list
             }
             court_data.append(day_data)
