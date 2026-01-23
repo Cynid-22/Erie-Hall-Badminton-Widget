@@ -1,0 +1,49 @@
+name: Check Court Availability
+
+on:
+  schedule:
+    # Run every hour from 6 AM to 11 PM EST (11:00 to 04:00 UTC next day)
+    - cron: '0 11-23,0-4 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  check-courts:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+
+      - name: Install ChromeDriver
+        uses: nanasess/setup-chromedriver@v2
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run gap finder
+        env:
+          PSU_USERNAME: ${{ secrets.PSU_USERNAME }}
+          PSU_PASSWORD: ${{ secrets.PSU_PASSWORD }}
+          TOTP_SECRET: ${{ secrets.TOTP_SECRET }}
+          CI: true
+        run: |
+          python main.py
+
+      - name: Commit and push results
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add gaps.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update court availability $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
