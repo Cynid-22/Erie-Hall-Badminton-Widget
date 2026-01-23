@@ -1,27 +1,7 @@
 {
-  "last_updated": "2026-01-23T04:24:24.623362Z",
+  "last_updated": "2026-01-23T04:34:25.800989Z",
   "courts": {
     "Court 1": [
-      {
-        "date": "Thu Jan 22 2026",
-        "slots": [
-          {
-            "start": "6AM",
-            "end": "9:05AM",
-            "duration_hours": 3.1
-          },
-          {
-            "start": "10:20AM",
-            "end": "4:30PM",
-            "duration_hours": 6.2
-          },
-          {
-            "start": "9PM",
-            "end": "11PM",
-            "duration_hours": 2.0
-          }
-        ]
-      },
       {
         "date": "Fri Jan 23 2026",
         "slots": [
@@ -136,24 +116,29 @@
             "duration_hours": 1.0
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Thu Jan 22 2026",
+        "date": "Thu Jan 29 2026",
         "slots": [
           {
             "start": "6AM",
-            "end": "10AM",
-            "duration_hours": 4.0
+            "end": "9:05AM",
+            "duration_hours": 3.1
           },
           {
-            "start": "8PM",
+            "start": "10:20AM",
+            "end": "3:30PM",
+            "duration_hours": 5.2
+          },
+          {
+            "start": "10PM",
             "end": "11PM",
-            "duration_hours": 3.0
+            "duration_hours": 1.0
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Fri Jan 23 2026",
         "slots": [
@@ -238,29 +223,24 @@
             "duration_hours": 2.0
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Thu Jan 22 2026",
+        "date": "Thu Jan 29 2026",
         "slots": [
           {
             "start": "6AM",
-            "end": "10AM",
-            "duration_hours": 4.0
+            "end": "3:30PM",
+            "duration_hours": 9.5
           },
           {
-            "start": "1PM",
-            "end": "5:30PM",
-            "duration_hours": 4.5
-          },
-          {
-            "start": "10PM",
+            "start": "8PM",
             "end": "11PM",
-            "duration_hours": 1.0
+            "duration_hours": 3.0
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Fri Jan 23 2026",
         "slots": [
@@ -358,6 +338,26 @@
             "start": "9PM",
             "end": "11PM",
             "duration_hours": 2.0
+          }
+        ]
+      },
+      {
+        "date": "Thu Jan 29 2026",
+        "slots": [
+          {
+            "start": "6AM",
+            "end": "12PM",
+            "duration_hours": 6.0
+          },
+          {
+            "start": "2:30PM",
+            "end": "3:30PM",
+            "duration_hours": 1.0
+          },
+          {
+            "start": "10PM",
+            "end": "11PM",
+            "duration_hours": 1.0
           }
         ]
       }
