@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-23T19:29:18.058357Z",
+  "last_updated": "2026-01-23T20:33:25Z",
   "courts": {
     "Court 1": [
       {
@@ -329,21 +329,15 @@
             "note": "Open"
           },
           {
-            "start": "18:00",
-            "end": "19:00",
-            "duration_hours": 1.0,
-            "note": "Open"
-          },
-          {
-            "start": "19:00",
-            "end": "20:00",
+            "start": "20:00",
+            "end": "21:00",
             "duration_hours": 1.0,
             "note": "Badminton Club"
           },
           {
-            "start": "20:00",
+            "start": "21:00",
             "end": "23:00",
-            "duration_hours": 3.0,
+            "duration_hours": 2.0,
             "note": "Open"
           }
         ]
