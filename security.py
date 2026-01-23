@@ -123,7 +123,7 @@ def setup_keyring():
         keyring.set_password(KEYRING_SERVICE, "username", username)
         keyring.set_password(KEYRING_SERVICE, "password", password)
         keyring.set_password(KEYRING_SERVICE, "totp_secret", totp_secret)
-        print("\n✓ Credentials stored securely in OS keyring!")
+        print("\n  Credentials stored securely in OS keyring!")
         print("  You can now run the script without --setup")
     except Exception as e:
         print(f"\nERROR storing credentials: {e}")

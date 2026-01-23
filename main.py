@@ -79,7 +79,7 @@ def save_results_json(all_gaps, all_badminton):
     with open("gaps.json", "w") as f:
         json.dump(output, f, indent=2)
     
-    print(f"\n✓ Results saved to gaps.json")
+    print(f"\n  Results saved to gaps.json")
 
 
 def filter_for_week(data_dict, target_start_date, days=7):

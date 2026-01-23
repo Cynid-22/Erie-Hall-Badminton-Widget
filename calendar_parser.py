@@ -207,13 +207,14 @@ def scrape_calendar_data(driver):
     return {}, []
 
 
+
 def print_badminton(badminton_events):
     """Pretty print badminton events"""
     if not badminton_events:
         return
     
     print(f"\n{'='*60}")
-    print("  🏸 BADMINTON OPEN PLAY TIMES")
+    print("  BADMINTON OPEN PLAY TIMES")
     print(f"{'='*60}")
     
     by_date = {}
@@ -229,7 +230,7 @@ def print_badminton(badminton_events):
     for date_str in sorted_dates:
         print(f"\n  {date_str}:")
         for event in by_date[date_str]:
-            print(f"    🏸 {event['start']} - {event['end']} ({event['name']})")
+            print(f"    - {event['start']} - {event['end']} ({event['name']})")
 
 
 def print_gaps(court_name, gaps):
@@ -253,9 +254,10 @@ def print_gaps(court_name, gaps):
             for gap in day_gaps:
                 start = format_hour(gap['start'])
                 end = format_hour(gap['end'])
-                print(f"    ✓ {start} - {end} ({gap['duration']:.1f} hrs)")
+                print(f"    - {start} - {end} ({gap['duration']:.1f} hrs)")
                 total += 1
         else:
             print(f"\n  {date_str}: Fully booked")
     
     print(f"\n  Total available slots: {total}")
+
