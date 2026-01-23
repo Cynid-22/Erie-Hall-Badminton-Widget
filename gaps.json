@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-23T16:39:01.364871Z",
+  "last_updated": "2026-01-23T17:31:10.667714Z",
   "courts": {
     "Court 1": [
       {
@@ -382,8 +382,8 @@
         "slots": [
           {
             "start": "06:00",
-            "end": "10:00",
-            "duration_hours": 4.0,
+            "end": "11:00",
+            "duration_hours": 5.0,
             "note": "Open"
           },
           {
@@ -405,8 +405,8 @@
         "slots": [
           {
             "start": "06:00",
-            "end": "12:00",
-            "duration_hours": 6.0,
+            "end": "13:30",
+            "duration_hours": 7.5,
             "note": "Open"
           },
           {
