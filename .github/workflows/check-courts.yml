@@ -2,8 +2,8 @@ name: Check Court Availability
 
 on:
   schedule:
-    # Run every hour from 6 AM to 11 PM EST (11:00 to 04:00 UTC next day)
-    - cron: '0 11-23,0-4 * * *'
+    # Run daily at 8 AM EST (1 PM UTC)
+    - cron: '0 13 * * *'
   workflow_dispatch:  # Allow manual trigger
 
 jobs:
