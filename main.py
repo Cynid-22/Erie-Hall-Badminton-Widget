@@ -12,7 +12,7 @@ import sys
 import os
 import gc
 import json
-from datetime import datetime
+from datetime import datetime, timedelta, date
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
@@ -20,22 +20,36 @@ from selenium.webdriver.chrome.service import Service
 from config import COURTS
 from security import get_credentials, setup_keyring
 from auth import auto_login
-from calendar_parser import find_gaps, print_gaps, format_hour
+from calendar_parser import (find_gaps, find_badminton_events, print_gaps, 
+                           print_badminton, format_hour, click_next_week, parse_date)
 
 # Detect CI environment
 IS_CI = os.getenv("CI") == "true"
 
 
-def save_results_json(all_gaps):
-    """Save results to JSON file for API access"""
+def save_results_json(all_gaps, all_badminton):
+    """
+    Save results to JSON file for API access.
+    Sorts strictly by date.
+    """
     output = {
         "last_updated": datetime.utcnow().isoformat() + "Z",
-        "courts": {}
+        "courts": {},
+        "badminton_open_play": []
     }
     
+    # Helper to sort dates
+    def date_key(d_str):
+        return parse_date(d_str) or date.min
+
+    # Add court gaps
     for court_name, gaps in all_gaps.items():
         court_data = []
-        for date_str, day_gaps in sorted(gaps.items()):
+        # Sort by date
+        sorted_dates = sorted(gaps.keys(), key=date_key)
+        
+        for date_str in sorted_dates:
+            day_gaps = gaps[date_str]
             day_data = {
                 "date": date_str,
                 "slots": []
@@ -49,11 +63,39 @@ def save_results_json(all_gaps):
             court_data.append(day_data)
         output["courts"][court_name] = court_data
     
+    # Add badminton events - Sort by date
+    # badminton events have 'date_str'
+    all_badminton.sort(key=lambda x: x['date']) # parsed date object
+    
+    for event in all_badminton:
+        output["badminton_open_play"].append({
+            "name": event['name'],
+            "date": event['date_str'],
+            "start": event['start'],
+            "end": event['end'],
+            "court": event.get('court', 'Unknown')
+        })
+    
     with open("gaps.json", "w") as f:
         json.dump(output, f, indent=2)
     
     print(f"\n✓ Results saved to gaps.json")
 
+
+def filter_for_week(data_dict, target_start_date, days=7):
+    """
+    Filter a dictionary of {date_str: data} to only include dates 
+    within [target_start_date, target_start_date + 6 days].
+    """
+    filtered = {}
+    target_end_date = target_start_date + timedelta(days=days-1)
+    
+    for date_str, content in data_dict.items():
+        d = parse_date(date_str)
+        if d and target_start_date <= d <= target_end_date:
+            filtered[date_str] = content
+            
+    return filtered
 
 def main():
     """Main application entry point"""
@@ -82,12 +124,10 @@ def main():
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     
-    # Always headless in CI, optional locally
     if IS_CI:
         options.add_argument("--headless")
         print("  Running in headless mode")
     
-    # CI-specific Chrome setup
     if IS_CI:
         service = Service()
         driver = webdriver.Chrome(service=service, options=options)
@@ -95,6 +135,12 @@ def main():
         driver = webdriver.Chrome(options=options)
     
     all_gaps = {}
+    all_badminton = []
+    
+    # Define our target window: Today + 6 days
+    today = datetime.now().date()
+    end_date = today + timedelta(days=6)
+    print(f"\nTarget Window: {today.strftime('%a %b %d')} to {end_date.strftime('%a %b %d')}")
     
     try:
         first_url = list(COURTS.values())[0]
@@ -102,7 +148,7 @@ def main():
         
         login_success = auto_login(driver, first_url, username, password, totp_secret)
         
-        # Clear credentials from memory
+        # Clear credentials
         password = '\x00' * len(password) if password else None
         totp_secret = '\x00' * len(totp_secret) if totp_secret else None
         del password, totp_secret
@@ -115,31 +161,75 @@ def main():
             else:
                 print("\n" + "-" * 60)
                 print("  AUTO-LOGIN FAILED OR NOT CONFIGURED")
-                print("  Please log in manually in the browser window.")
-                print("  Once you see the calendar, press ENTER to continue...")
-                print("-" * 60)
-                input()
+                input("Press ENTER to continue manually...")
         
-        print("\nScanning courts for available slots...")
+        print("\nScanning courts for available slots (Checking current + next week)...")
         print("-" * 60)
 
         for court_name, url in COURTS.items():
             print(f"\nChecking {court_name}...")
             driver.get(url)
-            gaps = find_gaps(driver, court_name)
-            all_gaps[court_name] = gaps
-            print_gaps(court_name, gaps)
+            
+            # 1. Scrape current view (Week 1)
+            print("  Scraping current week...")
+            gaps_week1 = find_gaps(driver, court_name)
+            badminton_week1 = find_badminton_events(driver)
+            
+            # 2. Click Next and Scrape (Week 2) to ensure coverage
+            # We do this blindly to ensure we catch the cross-week boundary
+            week2_success = click_next_week(driver)
+            
+            gaps_week2 = {}
+            badminton_week2 = []
+            
+            if week2_success:
+                print("  Scraping next week...")
+                gaps_week2 = find_gaps(driver, court_name)
+                badminton_week2 = find_badminton_events(driver)
+            else:
+                print("  (Could not navigate to next week, using only current view)")
+            
+            # 3. Merge results
+            merged_gaps = {**gaps_week1, **gaps_week2}
+            
+            # 4. Filter for [Today, Today+6]
+            filtered_gaps = filter_for_week(merged_gaps, today, 7)
+            all_gaps[court_name] = filtered_gaps
+            
+            # Merge and filter badminton
+            merged_badminton = badminton_week1 + badminton_week2
+            filtered_badminton = [
+                e for e in merged_badminton 
+                if e['date'] and today <= e['date'] <= end_date
+            ]
+            
+            # Allow duplicates? Maybe. But let's dedup by name+date just in case
+            # (If click next didn't actually move, we might see same events)
+            unique_badminton = []
+            seen = set()
+            for e in filtered_badminton:
+                key = (e['name'], e['date_str'], e['start'])
+                if key not in seen:
+                    seen.add(key)
+                    # Add court info
+                    e['court'] = court_name
+                    unique_badminton.append(e)
+            
+            all_badminton.extend(unique_badminton)
+            
+            print_gaps(court_name, filtered_gaps)
         
-        # Save to JSON
-        save_results_json(all_gaps)
+        print_badminton(all_badminton)
+        save_results_json(all_gaps, all_badminton)
         
         print("\n" + "=" * 60)
         print("  SCAN COMPLETE!")
         print("=" * 60)
         
         if not IS_CI:
-            print("\nPress Enter to close browser...")
-            input()
+            print("\nScan execution finished.")
+            # print("\nPress Enter to close browser...")
+            # input()
 
     finally:
         driver.quit()
