@@ -11,7 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import StaleElementReferenceException
 from config import OPEN_HOUR, CLOSE_HOUR
 
-__all__ = ['scrape_calendar_data', 'print_gaps', 'print_badminton', 'format_hour', 'click_next_week', 'parse_date']
+__all__ = ['scrape_calendar_data', 'print_gaps', 'print_badminton', 'format_hour', 'click_next_week', 'parse_date', 'parse_time']
 
 
 def parse_time(time_str):

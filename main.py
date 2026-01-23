@@ -22,7 +22,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from config import COURTS
 from security import get_credentials, setup_keyring
 from auth import auto_login
-from calendar_parser import (scrape_calendar_data, format_hour, click_next_week, parse_date)
+from calendar_parser import (scrape_calendar_data, format_hour, click_next_week, parse_date, parse_time)
 
 # Detect CI environment
 IS_CI = os.getenv("CI") == "true"
@@ -32,49 +32,66 @@ def save_results_json(all_gaps, all_badminton):
     """
     Save results to JSON file for API access.
     Sorts strictly by date.
+    Badminton events are merged into court slots with a 'note'.
     """
     output = {
         "last_updated": datetime.utcnow().isoformat() + "Z",
-        "courts": {},
-        "badminton_open_play": []
+        "courts": {}
     }
     
-    # Helper to sort dates
+    # helper
     def date_key(d_str):
         return parse_date(d_str) or date.min
 
-    # Add court gaps
+    # 1. Merge Badminton events into Gaps
+    for event in all_badminton:
+        court = event.get('court')
+        d_str = event['date_str']
+        
+        # Parse times to floats for sorting
+        s = parse_time(event['start'])
+        e = parse_time(event['end'])
+        
+        if court and d_str and s and e:
+            if court not in all_gaps:
+                all_gaps[court] = {}
+            if d_str not in all_gaps[court]:
+                all_gaps[court][d_str] = []
+                
+            # Add as a slot with a note
+            all_gaps[court][d_str].append({
+                'start': s,
+                'end': e,
+                'duration': e - s,
+                'note': "Badminton Club" 
+            })
+
+    # 2. Build Output
     for court_name, gaps in all_gaps.items():
         court_data = []
-        # Sort by date
         sorted_dates = sorted(gaps.keys(), key=date_key)
         
         for date_str in sorted_dates:
-            day_gaps = gaps[date_str]
+            day_items = gaps[date_str]
+            # Sort by start time
+            day_items.sort(key=lambda x: x['start'])
+            
+            slots_list = []
+            for item in day_items:
+                slots_list.append({
+                    "start": format_hour(item['start']),
+                    "end": format_hour(item['end']),
+                    "duration_hours": round(item['duration'], 1),
+                    "note": item.get('note', "Open")
+                })
+                
             day_data = {
                 "date": date_str,
-                "slots": []
+                "slots": slots_list
             }
-            for gap in day_gaps:
-                day_data["slots"].append({
-                    "start": format_hour(gap['start']),
-                    "end": format_hour(gap['end']),
-                    "duration_hours": round(gap['duration'], 1)
-                })
             court_data.append(day_data)
+            
         output["courts"][court_name] = court_data
-    
-    # Add badminton events - Sort by date
-    all_badminton.sort(key=lambda x: x['date']) # parsed date object
-    
-    for event in all_badminton:
-        output["badminton_open_play"].append({
-            "name": event['name'],
-            "date": event['date_str'],
-            "start": event['start'],
-            "end": event['end'],
-            "court": event.get('court', 'Unknown')
-        })
     
     with open("gaps.json", "w") as f:
         json.dump(output, f, indent=2)

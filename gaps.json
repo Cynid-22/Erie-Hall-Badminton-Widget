@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-23T04:50:24.039606Z",
+  "last_updated": "2026-01-23T05:16:13.927616Z",
   "courts": {
     "Court 1": [
       {
@@ -8,22 +8,26 @@
           {
             "start": "6AM",
             "end": "9:05AM",
-            "duration_hours": 3.1
+            "duration_hours": 3.1,
+            "note": "Open"
           },
           {
             "start": "9:54AM",
             "end": "11:15AM",
-            "duration_hours": 1.3
+            "duration_hours": 1.3,
+            "note": "Open"
           },
           {
             "start": "12:05PM",
             "end": "4:45PM",
-            "duration_hours": 4.7
+            "duration_hours": 4.7,
+            "note": "Open"
           },
           {
             "start": "6:45PM",
             "end": "10PM",
-            "duration_hours": 3.2
+            "duration_hours": 3.2,
+            "note": "Open"
           }
         ]
       },
@@ -33,7 +37,8 @@
           {
             "start": "2PM",
             "end": "10PM",
-            "duration_hours": 8.0
+            "duration_hours": 8.0,
+            "note": "Open"
           }
         ]
       },
@@ -43,7 +48,8 @@
           {
             "start": "4PM",
             "end": "11PM",
-            "duration_hours": 7.0
+            "duration_hours": 7.0,
+            "note": "Open"
           }
         ]
       },
@@ -53,22 +59,26 @@
           {
             "start": "6AM",
             "end": "9:05AM",
-            "duration_hours": 3.1
+            "duration_hours": 3.1,
+            "note": "Open"
           },
           {
             "start": "9:54AM",
             "end": "11:15AM",
-            "duration_hours": 1.3
+            "duration_hours": 1.3,
+            "note": "Open"
           },
           {
             "start": "12:05PM",
             "end": "4:45PM",
-            "duration_hours": 4.7
+            "duration_hours": 4.7,
+            "note": "Open"
           },
           {
             "start": "6:45PM",
             "end": "11PM",
-            "duration_hours": 4.2
+            "duration_hours": 4.2,
+            "note": "Open"
           }
         ]
       },
@@ -78,17 +88,20 @@
           {
             "start": "8AM",
             "end": "9:05AM",
-            "duration_hours": 1.1
+            "duration_hours": 1.1,
+            "note": "Open"
           },
           {
             "start": "10:20AM",
             "end": "3:30PM",
-            "duration_hours": 5.2
+            "duration_hours": 5.2,
+            "note": "Open"
           },
           {
             "start": "8PM",
             "end": "11PM",
-            "duration_hours": 3.0
+            "duration_hours": 3.0,
+            "note": "Open"
           }
         ]
       },
@@ -98,22 +111,26 @@
           {
             "start": "6AM",
             "end": "9:05AM",
-            "duration_hours": 3.1
+            "duration_hours": 3.1,
+            "note": "Open"
           },
           {
             "start": "9:54AM",
             "end": "11:15AM",
-            "duration_hours": 1.3
+            "duration_hours": 1.3,
+            "note": "Open"
           },
           {
             "start": "12:05PM",
             "end": "2:30PM",
-            "duration_hours": 2.4
+            "duration_hours": 2.4,
+            "note": "Open"
           },
           {
             "start": "4:15PM",
             "end": "5:15PM",
-            "duration_hours": 1.0
+            "duration_hours": 1.0,
+            "note": "Open"
           }
         ]
       },
@@ -123,17 +140,20 @@
           {
             "start": "6AM",
             "end": "9:05AM",
-            "duration_hours": 3.1
+            "duration_hours": 3.1,
+            "note": "Open"
           },
           {
             "start": "10:20AM",
             "end": "3:30PM",
-            "duration_hours": 5.2
+            "duration_hours": 5.2,
+            "note": "Open"
           },
           {
             "start": "10PM",
             "end": "11PM",
-            "duration_hours": 1.0
+            "duration_hours": 1.0,
+            "note": "Open"
           }
         ]
       }
@@ -145,12 +165,14 @@
           {
             "start": "6AM",
             "end": "4:45PM",
-            "duration_hours": 10.8
+            "duration_hours": 10.8,
+            "note": "Open"
           },
           {
             "start": "6:45PM",
             "end": "10PM",
-            "duration_hours": 3.2
+            "duration_hours": 3.2,
+            "note": "Open"
           }
         ]
       },
@@ -160,7 +182,8 @@
           {
             "start": "2PM",
             "end": "10PM",
-            "duration_hours": 8.0
+            "duration_hours": 8.0,
+            "note": "Open"
           }
         ]
       },
@@ -170,7 +193,8 @@
           {
             "start": "4PM",
             "end": "11PM",
-            "duration_hours": 7.0
+            "duration_hours": 7.0,
+            "note": "Open"
           }
         ]
       },
@@ -180,12 +204,14 @@
           {
             "start": "6AM",
             "end": "4:45PM",
-            "duration_hours": 10.8
+            "duration_hours": 10.8,
+            "note": "Open"
           },
           {
             "start": "6:45PM",
             "end": "11PM",
-            "duration_hours": 4.2
+            "duration_hours": 4.2,
+            "note": "Open"
           }
         ]
       },
@@ -195,12 +221,14 @@
           {
             "start": "8AM",
             "end": "3:30PM",
-            "duration_hours": 7.5
+            "duration_hours": 7.5,
+            "note": "Open"
           },
           {
             "start": "8PM",
             "end": "11PM",
-            "duration_hours": 3.0
+            "duration_hours": 3.0,
+            "note": "Open"
           }
         ]
       },
@@ -210,17 +238,20 @@
           {
             "start": "6AM",
             "end": "2:30PM",
-            "duration_hours": 8.5
+            "duration_hours": 8.5,
+            "note": "Open"
           },
           {
             "start": "4:15PM",
             "end": "5:15PM",
-            "duration_hours": 1.0
+            "duration_hours": 1.0,
+            "note": "Open"
           },
           {
             "start": "9PM",
             "end": "11PM",
-            "duration_hours": 2.0
+            "duration_hours": 2.0,
+            "note": "Open"
           }
         ]
       },
@@ -230,12 +261,14 @@
           {
             "start": "6AM",
             "end": "3:30PM",
-            "duration_hours": 9.5
+            "duration_hours": 9.5,
+            "note": "Open"
           },
           {
             "start": "8PM",
             "end": "11PM",
-            "duration_hours": 3.0
+            "duration_hours": 3.0,
+            "note": "Open"
           }
         ]
       }
@@ -247,17 +280,20 @@
           {
             "start": "6AM",
             "end": "10:15AM",
-            "duration_hours": 4.2
+            "duration_hours": 4.2,
+            "note": "Open"
           },
           {
             "start": "4PM",
             "end": "5:30PM",
-            "duration_hours": 1.5
+            "duration_hours": 1.5,
+            "note": "Open"
           },
           {
             "start": "8:30PM",
             "end": "10PM",
-            "duration_hours": 1.5
+            "duration_hours": 1.5,
+            "note": "Open"
           }
         ]
       },
@@ -267,7 +303,8 @@
           {
             "start": "2PM",
             "end": "10PM",
-            "duration_hours": 8.0
+            "duration_hours": 8.0,
+            "note": "Open"
           }
         ]
       },
@@ -277,7 +314,8 @@
           {
             "start": "8PM",
             "end": "11PM",
-            "duration_hours": 3.0
+            "duration_hours": 3.0,
+            "note": "Open"
           }
         ]
       },
@@ -287,17 +325,26 @@
           {
             "start": "6AM",
             "end": "9AM",
-            "duration_hours": 3.0
+            "duration_hours": 3.0,
+            "note": "Open"
           },
           {
             "start": "6PM",
             "end": "7PM",
-            "duration_hours": 1.0
+            "duration_hours": 1.0,
+            "note": "Open"
+          },
+          {
+            "start": "7PM",
+            "end": "8PM",
+            "duration_hours": 1.0,
+            "note": "Badminton Club"
           },
           {
             "start": "8PM",
             "end": "11PM",
-            "duration_hours": 3.0
+            "duration_hours": 3.0,
+            "note": "Open"
           }
         ]
       },
@@ -307,17 +354,26 @@
           {
             "start": "8AM",
             "end": "9AM",
-            "duration_hours": 1.0
+            "duration_hours": 1.0,
+            "note": "Open"
           },
           {
             "start": "2PM",
             "end": "3:30PM",
-            "duration_hours": 1.5
+            "duration_hours": 1.5,
+            "note": "Open"
+          },
+          {
+            "start": "8:30PM",
+            "end": "9:30PM",
+            "duration_hours": 1.0,
+            "note": "Badminton Club"
           },
           {
             "start": "9:30PM",
             "end": "11PM",
-            "duration_hours": 1.5
+            "duration_hours": 1.5,
+            "note": "Open"
           }
         ]
       },
@@ -327,17 +383,20 @@
           {
             "start": "6AM",
             "end": "10AM",
-            "duration_hours": 4.0
+            "duration_hours": 4.0,
+            "note": "Open"
           },
           {
             "start": "1:15PM",
             "end": "2:30PM",
-            "duration_hours": 1.2
+            "duration_hours": 1.2,
+            "note": "Open"
           },
           {
             "start": "9PM",
             "end": "11PM",
-            "duration_hours": 2.0
+            "duration_hours": 2.0,
+            "note": "Open"
           }
         ]
       },
@@ -347,36 +406,23 @@
           {
             "start": "6AM",
             "end": "12PM",
-            "duration_hours": 6.0
+            "duration_hours": 6.0,
+            "note": "Open"
           },
           {
             "start": "2:30PM",
             "end": "3:30PM",
-            "duration_hours": 1.0
+            "duration_hours": 1.0,
+            "note": "Open"
           },
           {
             "start": "10PM",
             "end": "11PM",
-            "duration_hours": 1.0
+            "duration_hours": 1.0,
+            "note": "Open"
           }
         ]
       }
     ]
-  },
-  "badminton_open_play": [
-    {
-      "name": "Badminton Club Open Play",
-      "date": "Mon Jan 26 2026",
-      "start": "7PM",
-      "end": "8PM",
-      "court": "Court 3"
-    },
-    {
-      "name": "Badminton Club Open Play",
-      "date": "Tue Jan 27 2026",
-      "start": "8:30PM",
-      "end": "9:30PM",
-      "court": "Court 3"
-    }
-  ]
+  }
 }
