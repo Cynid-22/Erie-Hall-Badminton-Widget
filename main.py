@@ -35,7 +35,7 @@ def save_results_json(all_gaps, all_badminton):
     Badminton events are merged into court slots with a 'note'.
     """
     output = {
-        "last_updated": datetime.utcnow().isoformat() + "Z",
+        "last_updated": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
         "courts": {}
     }
     
