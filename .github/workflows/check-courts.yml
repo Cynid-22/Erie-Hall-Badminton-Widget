@@ -5,8 +5,8 @@ permissions:
 
 on:
   schedule:
-    # 13:00 UTC is 8:00 AM EST
-    - cron: '0 13 * * *'
+    # 13:05 UTC is 8:05 AM EST (offset to reset GitHub scheduler)
+    - cron: '5 13 * * *'
   workflow_dispatch: 
 
 # Prevents multiple instances of this workflow from running at once
