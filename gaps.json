@@ -1,18 +1,7 @@
 {
-  "last_updated": 1769261901,
+  "last_updated": 1769348327,
   "courts": {
     "Court 1": [
-      {
-        "date": "Sat, 24-Jan",
-        "slots": [
-          {
-            "start": "14:00",
-            "end": "22:00",
-            "duration_hours": 8.0,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Sun, 25-Jan",
         "slots": [
@@ -150,23 +139,15 @@
             "note": "Open"
           },
           {
-            "start": "17:45",
-            "end": "19:00",
-            "duration_hours": 1.2,
-            "note": "Open"
-          },
-          {
             "start": "21:00",
             "end": "22:00",
             "duration_hours": 1.0,
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Sat, 24-Jan",
+        "date": "Sat, 31-Jan",
         "slots": [
           {
             "start": "14:00",
@@ -175,7 +156,9 @@
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Sun, 25-Jan",
         "slots": [
@@ -271,23 +254,15 @@
             "note": "Open"
           },
           {
-            "start": "17:45",
-            "end": "19:00",
-            "duration_hours": 1.2,
-            "note": "Open"
-          },
-          {
             "start": "21:00",
             "end": "22:00",
             "duration_hours": 1.0,
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Sat, 24-Jan",
+        "date": "Sat, 31-Jan",
         "slots": [
           {
             "start": "14:00",
@@ -296,7 +271,9 @@
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Sun, 25-Jan",
         "slots": [
@@ -425,6 +402,17 @@
             "start": "21:00",
             "end": "22:00",
             "duration_hours": 1.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sat, 31-Jan",
+        "slots": [
+          {
+            "start": "14:00",
+            "end": "22:00",
+            "duration_hours": 8.0,
             "note": "Open"
           }
         ]
