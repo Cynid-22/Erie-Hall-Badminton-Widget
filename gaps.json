@@ -1,18 +1,7 @@
 {
-  "last_updated": 1769348327,
+  "last_updated": 1769435497,
   "courts": {
     "Court 1": [
-      {
-        "date": "Sun, 25-Jan",
-        "slots": [
-          {
-            "start": "16:00",
-            "end": "23:00",
-            "duration_hours": 7.0,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Mon, 26-Jan",
         "slots": [
@@ -156,20 +145,26 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Sun, 25-Jan",
+        "date": "Sun, 01-Feb",
         "slots": [
           {
-            "start": "16:00",
+            "start": "14:00",
+            "end": "16:00",
+            "duration_hours": 2.0,
+            "note": "Open"
+          },
+          {
+            "start": "18:00",
             "end": "23:00",
-            "duration_hours": 7.0,
+            "duration_hours": 5.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Mon, 26-Jan",
         "slots": [
@@ -271,20 +266,26 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Sun, 25-Jan",
+        "date": "Sun, 01-Feb",
         "slots": [
           {
-            "start": "20:00",
+            "start": "12:00",
+            "end": "16:00",
+            "duration_hours": 4.0,
+            "note": "Open"
+          },
+          {
+            "start": "18:00",
             "end": "23:00",
-            "duration_hours": 3.0,
+            "duration_hours": 5.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Mon, 26-Jan",
         "slots": [
@@ -413,6 +414,23 @@
             "start": "14:00",
             "end": "22:00",
             "duration_hours": 8.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sun, 01-Feb",
+        "slots": [
+          {
+            "start": "12:00",
+            "end": "14:30",
+            "duration_hours": 2.5,
+            "note": "Open"
+          },
+          {
+            "start": "18:30",
+            "end": "23:00",
+            "duration_hours": 4.5,
             "note": "Open"
           }
         ]
