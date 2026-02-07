@@ -1,20 +1,14 @@
 {
-  "last_updated": 1770494359,
+  "last_updated": 1770495328,
   "courts": {
     "Court 1": [
       {
         "date": "Sat, 07-Feb",
         "slots": [
           {
-            "start": "06:00",
-            "end": "08:30",
-            "duration_hours": 2.5,
-            "note": "Open"
-          },
-          {
             "start": "16:30",
-            "end": "23:00",
-            "duration_hours": 6.5,
+            "end": "22:00",
+            "duration_hours": 5.5,
             "note": "Open"
           }
         ]
@@ -22,12 +16,6 @@
       {
         "date": "Sun, 08-Feb",
         "slots": [
-          {
-            "start": "06:00",
-            "end": "09:00",
-            "duration_hours": 3.0,
-            "note": "Open"
-          },
           {
             "start": "16:30",
             "end": "23:00",
@@ -169,8 +157,8 @@
           },
           {
             "start": "21:00",
-            "end": "23:00",
-            "duration_hours": 2.0,
+            "end": "22:00",
+            "duration_hours": 1.0,
             "note": "Open"
           }
         ]
@@ -181,15 +169,9 @@
         "date": "Sat, 07-Feb",
         "slots": [
           {
-            "start": "06:00",
-            "end": "08:30",
-            "duration_hours": 2.5,
-            "note": "Open"
-          },
-          {
             "start": "16:30",
-            "end": "23:00",
-            "duration_hours": 6.5,
+            "end": "22:00",
+            "duration_hours": 5.5,
             "note": "Open"
           }
         ]
@@ -197,12 +179,6 @@
       {
         "date": "Sun, 08-Feb",
         "slots": [
-          {
-            "start": "06:00",
-            "end": "09:00",
-            "duration_hours": 3.0,
-            "note": "Open"
-          },
           {
             "start": "16:30",
             "end": "23:00",
@@ -320,8 +296,8 @@
           },
           {
             "start": "21:00",
-            "end": "23:00",
-            "duration_hours": 2.0,
+            "end": "22:00",
+            "duration_hours": 1.0,
             "note": "Open"
           }
         ]
@@ -332,15 +308,9 @@
         "date": "Sat, 07-Feb",
         "slots": [
           {
-            "start": "06:00",
-            "end": "08:30",
-            "duration_hours": 2.5,
-            "note": "Open"
-          },
-          {
             "start": "16:00",
-            "end": "23:00",
-            "duration_hours": 7.0,
+            "end": "22:00",
+            "duration_hours": 6.0,
             "note": "Open"
           }
         ]
@@ -348,12 +318,6 @@
       {
         "date": "Sun, 08-Feb",
         "slots": [
-          {
-            "start": "06:00",
-            "end": "09:00",
-            "duration_hours": 3.0,
-            "note": "Open"
-          },
           {
             "start": "20:30",
             "end": "23:00",
@@ -459,8 +423,8 @@
           },
           {
             "start": "21:00",
-            "end": "23:00",
-            "duration_hours": 2.0,
+            "end": "22:00",
+            "duration_hours": 1.0,
             "note": "Open"
           }
         ]
