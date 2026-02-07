@@ -1,10 +1,10 @@
 # Configuration and constants
 
-# Court URLs
+# Court URLs (iCal Feeds)
 COURTS = {
-    "Court 1": "https://25live.collegenet.com/pro/psu#!/home/location/6451",
-    "Court 2": "https://25live.collegenet.com/pro/psu#!/home/location/6452",
-    "Court 3": "https://25live.collegenet.com/pro/psu#!/home/location/105",
+    "Court 1": "https://25live.collegenet.com/25live/data/psu/run/rm_reservations.ics?caller=pro&space_id=6451&start_dt=-30&end_dt=+180&options=standard",
+    "Court 2": "https://25live.collegenet.com/25live/data/psu/run/rm_reservations.ics?caller=pro&space_id=6452&start_dt=-30&end_dt=+180&options=standard",
+    "Court 3": "https://25live.collegenet.com/25live/data/psu/run/rm_reservations.ics?caller=pro&space_id=105&start_dt=-30&end_dt=+180&options=standard",
 }
 
 # Operating hours

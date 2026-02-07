@@ -30,23 +30,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Chrome
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: stable
-
-      - name: Install ChromeDriver
-        uses: nanasess/setup-chromedriver@v2
-
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
 
-      - name: Run gap finder
+      - name: Run gap finder (iCal mode)
         env:
-          PSU_USERNAME: ${{ secrets.PSU_USERNAME }}
-          PSU_PASSWORD: ${{ secrets.PSU_PASSWORD }}
-          TOTP_SECRET: ${{ secrets.TOTP_SECRET }}
           CI: true
         run: |
           python main.py

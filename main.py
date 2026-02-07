@@ -5,24 +5,17 @@ Main entry point - works both locally and in GitHub Actions CI.
 
 Usage:
     python main.py           # Run the gap finder
-    python main.py --setup   # Configure secure keyring storage (local only)
 """
 
 import sys
 import os
-import gc
 import json
 import time
 from datetime import datetime, timedelta, date
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 
+# No more Selenium imports needed!
 from config import COURTS
-from security import get_credentials, setup_keyring
-from auth import auto_login
-from calendar_parser import (scrape_calendar_data, format_hour, click_next_week, parse_date, parse_time)
+from ical_parser import (fetch_ical_data, format_hour, parse_date, parse_time)
 
 # Detect CI environment
 IS_CI = os.getenv("CI") == "true"
@@ -118,43 +111,14 @@ def filter_for_week(data_dict, target_start_date, days=7):
             
     return filtered
 
+
 def main():
     """Main application entry point"""
     
-    # Handle --setup flag (local only)
-    if len(sys.argv) > 1 and sys.argv[1] == "--setup":
-        if IS_CI:
-            print("ERROR: --setup is not available in CI mode")
-            return
-        setup_keyring()
-        return
-    
     # Minimal status output
-    print("  ERIE HALL COURT GAP FINDER")
+    print("  ERIE HALL COURT GAP FINDER (iCal Mode)")
     if IS_CI:
         print("  (Running in GitHub Actions)")
-    
-    # Load credentials
-    username, password, totp_secret = get_credentials()
-    
-    # Browser setup
-    options = Options()
-    options.add_argument("--disable-gpu")
-    options.add_argument("--window-size=1920,1080")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--log-level=3")  # Suppress Chrome logs
-    
-    if IS_CI:
-        options.add_argument("--headless")
-    
-    if IS_CI:
-        service = Service()
-        driver = webdriver.Chrome(service=service, options=options)
-    else:
-        # Use webdriver_manager handles driver verification/installation locally
-        service = Service(ChromeDriverManager().install())
-        driver = webdriver.Chrome(service=service, options=options)
     
     all_gaps = {}
     all_badminton = []
@@ -163,81 +127,39 @@ def main():
     today = datetime.now().date()
     end_date = today + timedelta(days=6)
     
-    try:
-        first_url = list(COURTS.values())[0]
-        login_success = auto_login(driver, first_url, username, password, totp_secret)
-        
-        # Clear credentials
-        password = '\x00' * len(password) if password else None
-        totp_secret = '\x00' * len(totp_secret) if totp_secret else None
-        del password, totp_secret
-        gc.collect()
-        
-        if not login_success:
-            if IS_CI:
-                print("ERROR: Auto-login failed in CI mode")
-                sys.exit(1)
-            else:
-                print("\n  AUTO-LOGIN FAILED - Please log in manually.")
-                input("Press ENTER after login...")
-        
-        print(f"\nScanning courts ({today.strftime('%b %d')} - {end_date.strftime('%b %d')})...")
+    print(f"\nScanning courts ({today.strftime('%b %d')} - {end_date.strftime('%b %d')})...")
 
-        for court_name, url in COURTS.items():
-            print(f"  Checking {court_name}...")
-            driver.get(url)
-            time.sleep(3) # Explicit wait for page load
-            
-            # 1. Scrape current week
-            gaps_week1, badminton_week1 = scrape_calendar_data(driver)
-            
-            # Robust check for Week 1 data
-            if not gaps_week1 and not badminton_week1:
-                # Retry once if empty
-                print("    ...Retrying scrape for current week...")
-                driver.refresh()
-                time.sleep(5)
-                gaps_week1, badminton_week1 = scrape_calendar_data(driver)
-            
-            # 2. Click Next and Scrape (Week 2)
-            week2_success = click_next_week(driver)
-            gaps_week2 = {}
-            badminton_week2 = []
-            
-            if week2_success:
-                gaps_week2, badminton_week2 = scrape_calendar_data(driver)
-            
-            # 3. Merge results
-            merged_gaps = {**gaps_week1, **gaps_week2}
-            
-            # 4. Filter for [Today, Today+6]
-            filtered_gaps = filter_for_week(merged_gaps, today, 7)
-            all_gaps[court_name] = filtered_gaps
-            
-            # Merge and filter badminton
-            merged_badminton = badminton_week1 + badminton_week2
-            filtered_badminton = [
-                e for e in merged_badminton 
-                if e['date'] and today <= e['date'] <= end_date
-            ]
-            
-            # Dedup badminton events
-            seen = set()
-            for e in filtered_badminton:
-                key = (e['name'], e['date_str'], e['start'])
-                if key not in seen:
-                    seen.add(key)
-                    e['court'] = court_name
-                    all_badminton.extend([e])
+    # Iterate through courts using the URLs from config.py
+    for court_name, ical_url in COURTS.items():
+        print(f"  Checking {court_name}...")
         
-        save_results_json(all_gaps, all_badminton)
+        # 1. Fetch from iCal (URLs are now direct in config.py)
+        court_gaps, court_badminton = fetch_ical_data(ical_url)
         
-        if not IS_CI:
-            print("Scan finished.")
-
-    finally:
-        driver.quit()
-        gc.collect()
+        # 2. Filter for [Today, Today+6]
+        filtered_gaps = filter_for_week(court_gaps, today, 7)
+        all_gaps[court_name] = filtered_gaps
+        
+        # Merge and filter badminton
+        # Filter by date
+        filtered_badminton = [
+            e for e in court_badminton 
+            if e.get('date') and today <= e['date'] <= end_date
+        ]
+        
+        # Dedup badminton events
+        seen = set()
+        for e in filtered_badminton:
+            key = (e['name'], e['date_str'], e['start'])
+            if key not in seen:
+                seen.add(key)
+                e['court'] = court_name
+                all_badminton.extend([e])
+    
+    save_results_json(all_gaps, all_badminton)
+    
+    if not IS_CI:
+        print("Scan finished.")
 
 
 if __name__ == "__main__":
