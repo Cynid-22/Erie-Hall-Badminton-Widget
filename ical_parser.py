@@ -8,7 +8,7 @@ import re
 from ics import Calendar
 from datetime import datetime, timedelta
 import pytz
-from config import OPEN_HOUR, CLOSE_HOUR
+from config import OPERATING_HOURS
 
 # PSU usually operates on Eastern Time
 EASTERN = pytz.timezone("America/New_York")
@@ -107,8 +107,13 @@ def fetch_ical_data(ical_url):
         # Sort events by start time
         events.sort(key=lambda x: x['start'])
         
+        # Get operating hours for this day of week
+        dt = datetime.strptime(date_str, "%a %b %d %Y")
+        day_of_week = dt.weekday()  # Mon=0, Sun=6
+        open_h, close_h = OPERATING_HOURS.get(day_of_week, (6, 23)) # Default to 6-11 if missing
+
         day_gaps = []
-        current_time = OPEN_HOUR
+        current_time = open_h
         
         for event in events:
             # If there is space between current_time and event start
@@ -127,12 +132,12 @@ def fetch_ical_data(ical_url):
                 current_time = event['end']
         
         # Check for gap at end of day
-        if current_time < CLOSE_HOUR:
-            duration = CLOSE_HOUR - current_time
+        if current_time < close_h:
+            duration = close_h - current_time
             if duration >= 1.0:
                 day_gaps.append({
                     'start': current_time, 
-                    'end': CLOSE_HOUR, 
+                    'end': close_h, 
                     'duration': duration
                 })
         
