@@ -1,36 +1,7 @@
 {
-  "last_updated": 1770819567,
+  "last_updated": 1770905711,
   "courts": {
     "Court 1": [
-      {
-        "date": "Wed, 11-Feb",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "09:05",
-            "duration_hours": 3.1,
-            "note": "Open"
-          },
-          {
-            "start": "09:54",
-            "end": "11:15",
-            "duration_hours": 1.3,
-            "note": "Open"
-          },
-          {
-            "start": "12:05",
-            "end": "14:30",
-            "duration_hours": 2.4,
-            "note": "Open"
-          },
-          {
-            "start": "16:15",
-            "end": "18:30",
-            "duration_hours": 2.2,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Thu, 12-Feb",
         "slots": [
@@ -174,38 +145,38 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Wed, 11-Feb",
+        "date": "Wed, 18-Feb",
         "slots": [
           {
             "start": "06:00",
-            "end": "11:00",
-            "duration_hours": 5.0,
+            "end": "09:05",
+            "duration_hours": 3.1,
             "note": "Open"
           },
           {
-            "start": "12:00",
-            "end": "14:30",
-            "duration_hours": 2.5,
+            "start": "09:54",
+            "end": "11:15",
+            "duration_hours": 1.3,
             "note": "Open"
           },
           {
-            "start": "16:15",
-            "end": "18:30",
-            "duration_hours": 2.2,
+            "start": "12:05",
+            "end": "20:00",
+            "duration_hours": 7.9,
             "note": "Open"
           },
           {
-            "start": "21:00",
+            "start": "22:00",
             "end": "23:00",
-            "duration_hours": 2.0,
+            "duration_hours": 1.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Thu, 12-Feb",
         "slots": [
@@ -319,32 +290,26 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Wed, 11-Feb",
+        "date": "Wed, 18-Feb",
         "slots": [
           {
             "start": "06:00",
-            "end": "10:00",
-            "duration_hours": 4.0,
+            "end": "07:00",
+            "duration_hours": 1.0,
             "note": "Open"
           },
           {
-            "start": "13:15",
-            "end": "14:30",
-            "duration_hours": 1.2,
-            "note": "Open"
-          },
-          {
-            "start": "21:00",
+            "start": "18:00",
             "end": "23:00",
-            "duration_hours": 2.0,
+            "duration_hours": 5.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Thu, 12-Feb",
         "slots": [
@@ -444,6 +409,23 @@
             "end": "21:30",
             "duration_hours": 1.0,
             "note": "Badminton Club"
+          }
+        ]
+      },
+      {
+        "date": "Wed, 18-Feb",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "07:00",
+            "duration_hours": 1.0,
+            "note": "Open"
+          },
+          {
+            "start": "18:00",
+            "end": "23:00",
+            "duration_hours": 5.0,
+            "note": "Open"
           }
         ]
       }
