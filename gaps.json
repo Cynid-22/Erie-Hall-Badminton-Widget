@@ -1,36 +1,7 @@
 {
-  "last_updated": 1770991619,
+  "last_updated": 1771077110,
   "courts": {
     "Court 1": [
-      {
-        "date": "Fri, 13-Feb",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "09:05",
-            "duration_hours": 3.1,
-            "note": "Open"
-          },
-          {
-            "start": "09:54",
-            "end": "11:15",
-            "duration_hours": 1.3,
-            "note": "Open"
-          },
-          {
-            "start": "12:05",
-            "end": "16:00",
-            "duration_hours": 3.9,
-            "note": "Open"
-          },
-          {
-            "start": "21:00",
-            "end": "22:00",
-            "duration_hours": 1.0,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Sat, 14-Feb",
         "slots": [
@@ -168,16 +139,26 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Fri, 13-Feb",
+        "date": "Fri, 20-Feb",
         "slots": [
           {
             "start": "06:00",
+            "end": "09:05",
+            "duration_hours": 3.1,
+            "note": "Open"
+          },
+          {
+            "start": "09:54",
+            "end": "11:15",
+            "duration_hours": 1.3,
+            "note": "Open"
+          },
+          {
+            "start": "12:05",
             "end": "16:00",
-            "duration_hours": 10.0,
+            "duration_hours": 3.9,
             "note": "Open"
           },
           {
@@ -187,7 +168,9 @@
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Sat, 14-Feb",
         "slots": [
@@ -289,16 +272,14 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Fri, 13-Feb",
+        "date": "Fri, 20-Feb",
         "slots": [
           {
             "start": "06:00",
-            "end": "10:15",
-            "duration_hours": 4.2,
+            "end": "16:00",
+            "duration_hours": 10.0,
             "note": "Open"
           },
           {
@@ -308,7 +289,9 @@
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Sat, 14-Feb",
         "slots": [
@@ -407,6 +390,23 @@
             "start": "20:00",
             "end": "23:00",
             "duration_hours": 3.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Fri, 20-Feb",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "10:15",
+            "duration_hours": 4.2,
+            "note": "Open"
+          },
+          {
+            "start": "21:00",
+            "end": "22:00",
+            "duration_hours": 1.0,
             "note": "Open"
           }
         ]
