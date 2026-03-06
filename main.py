@@ -14,7 +14,7 @@ import time
 from datetime import datetime, timedelta, date
 
 # No more Selenium imports needed!
-from config import COURTS
+from config import COURTS, OPERATING_HOURS
 from ical_parser import (fetch_ical_data, format_hour, parse_date, parse_time)
 
 # Detect CI environment
@@ -138,6 +138,19 @@ def main():
         
         # 2. Filter for [Today, Today+6]
         filtered_gaps = filter_for_week(court_gaps, today, 7)
+
+        # 3. Add full-day open entry for days with no events at all
+        for i in range(7):
+            d = today + timedelta(days=i)
+            date_str = d.strftime("%a %b %d %Y")
+            if date_str not in filtered_gaps:
+                open_h, close_h = OPERATING_HOURS.get(d.weekday(), (6, 23))
+                filtered_gaps[date_str] = [{
+                    'start': open_h,
+                    'end': close_h,
+                    'duration': close_h - open_h
+                }]
+
         all_gaps[court_name] = filtered_gaps
         
         # Merge and filter badminton
