@@ -1,5 +1,5 @@
 {
-  "last_updated": 1772805598,
+  "last_updated": 1772819746,
   "courts": {
     "Court 1": [
       {
@@ -37,6 +37,17 @@
         ]
       },
       {
+        "date": "Sun, 08-Mar",
+        "slots": [
+          {
+            "start": "12:00",
+            "end": "23:00",
+            "duration_hours": 11,
+            "note": "Open"
+          }
+        ]
+      },
+      {
         "date": "Mon, 09-Mar",
         "slots": [
           {
@@ -48,12 +59,34 @@
         ]
       },
       {
+        "date": "Tue, 10-Mar",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
+            "note": "Open"
+          }
+        ]
+      },
+      {
         "date": "Wed, 11-Mar",
         "slots": [
           {
             "start": "06:00",
             "end": "21:00",
             "duration_hours": 15.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Thu, 12-Mar",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
             "note": "Open"
           }
         ]
@@ -78,6 +111,39 @@
             "start": "11:00",
             "end": "22:00",
             "duration_hours": 11.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sun, 08-Mar",
+        "slots": [
+          {
+            "start": "12:00",
+            "end": "23:00",
+            "duration_hours": 11,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Mon, 09-Mar",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Tue, 10-Mar",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
             "note": "Open"
           }
         ]
@@ -175,12 +241,34 @@
         ]
       },
       {
+        "date": "Tue, 10-Mar",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
+            "note": "Open"
+          }
+        ]
+      },
+      {
         "date": "Wed, 11-Mar",
         "slots": [
           {
             "start": "06:00",
             "end": "17:30",
             "duration_hours": 11.5,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Thu, 12-Mar",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
             "note": "Open"
           }
         ]
