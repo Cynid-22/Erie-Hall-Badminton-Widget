@@ -1,30 +1,7 @@
 {
-  "last_updated": 1772819746,
+  "last_updated": 1772891196,
   "courts": {
     "Court 1": [
-      {
-        "date": "Fri, 06-Mar",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "09:05",
-            "duration_hours": 3.1,
-            "note": "Open"
-          },
-          {
-            "start": "09:54",
-            "end": "11:15",
-            "duration_hours": 1.3,
-            "note": "Open"
-          },
-          {
-            "start": "12:05",
-            "end": "22:00",
-            "duration_hours": 9.9,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Sat, 07-Mar",
         "slots": [
@@ -90,20 +67,20 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Fri, 06-Mar",
+        "date": "Fri, 13-Mar",
         "slots": [
           {
             "start": "06:00",
-            "end": "15:00",
-            "duration_hours": 9.0,
+            "end": "22:00",
+            "duration_hours": 16,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Sat, 07-Mar",
         "slots": [
@@ -181,26 +158,20 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Fri, 06-Mar",
+        "date": "Fri, 13-Mar",
         "slots": [
           {
             "start": "06:00",
-            "end": "10:15",
-            "duration_hours": 4.2,
-            "note": "Open"
-          },
-          {
-            "start": "14:00",
             "end": "22:00",
-            "duration_hours": 8.0,
+            "duration_hours": 16,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Sat, 07-Mar",
         "slots": [
@@ -269,6 +240,17 @@
             "start": "06:00",
             "end": "23:00",
             "duration_hours": 17,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Fri, 13-Mar",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "22:00",
+            "duration_hours": 16,
             "note": "Open"
           }
         ]
