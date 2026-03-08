@@ -1,18 +1,7 @@
 {
-  "last_updated": 1772891196,
+  "last_updated": 1772977667,
   "courts": {
     "Court 1": [
-      {
-        "date": "Sat, 07-Mar",
-        "slots": [
-          {
-            "start": "11:00",
-            "end": "22:00",
-            "duration_hours": 11.0,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Sun, 08-Mar",
         "slots": [
@@ -78,20 +67,26 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Sat, 07-Mar",
+        "date": "Sat, 14-Mar",
         "slots": [
           {
-            "start": "11:00",
+            "start": "10:00",
+            "end": "17:00",
+            "duration_hours": 7.0,
+            "note": "Open"
+          },
+          {
+            "start": "19:00",
             "end": "22:00",
-            "duration_hours": 11.0,
+            "duration_hours": 3.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Sun, 08-Mar",
         "slots": [
@@ -169,20 +164,20 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Sat, 07-Mar",
+        "date": "Sat, 14-Mar",
         "slots": [
           {
-            "start": "11:00",
+            "start": "10:00",
             "end": "22:00",
-            "duration_hours": 11.0,
+            "duration_hours": 12,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Sun, 08-Mar",
         "slots": [
@@ -251,6 +246,17 @@
             "start": "06:00",
             "end": "22:00",
             "duration_hours": 16,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sat, 14-Mar",
+        "slots": [
+          {
+            "start": "10:00",
+            "end": "22:00",
+            "duration_hours": 12,
             "note": "Open"
           }
         ]
