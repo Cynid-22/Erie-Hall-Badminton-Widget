@@ -1,18 +1,7 @@
 {
-  "last_updated": 1773238268,
+  "last_updated": 1773324522,
   "courts": {
     "Court 1": [
-      {
-        "date": "Wed, 11-Mar",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "21:00",
-            "duration_hours": 15.0,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Thu, 12-Mar",
         "slots": [
@@ -114,26 +103,32 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Wed, 11-Mar",
+        "date": "Wed, 18-Mar",
         "slots": [
           {
             "start": "06:00",
-            "end": "11:00",
-            "duration_hours": 5.0,
+            "end": "09:05",
+            "duration_hours": 3.1,
             "note": "Open"
           },
           {
-            "start": "12:00",
-            "end": "23:00",
-            "duration_hours": 11.0,
+            "start": "09:54",
+            "end": "11:15",
+            "duration_hours": 1.3,
+            "note": "Open"
+          },
+          {
+            "start": "12:05",
+            "end": "18:30",
+            "duration_hours": 6.4,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Thu, 12-Mar",
         "slots": [
@@ -211,20 +206,26 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Wed, 11-Mar",
+        "date": "Wed, 18-Mar",
         "slots": [
           {
             "start": "06:00",
-            "end": "17:30",
-            "duration_hours": 11.5,
+            "end": "11:00",
+            "duration_hours": 5.0,
+            "note": "Open"
+          },
+          {
+            "start": "16:00",
+            "end": "18:30",
+            "duration_hours": 2.5,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Thu, 12-Mar",
         "slots": [
@@ -329,6 +330,23 @@
             "start": "20:00",
             "end": "23:00",
             "duration_hours": 3.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Wed, 18-Mar",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "10:00",
+            "duration_hours": 4.0,
+            "note": "Open"
+          },
+          {
+            "start": "13:15",
+            "end": "16:30",
+            "duration_hours": 3.2,
             "note": "Open"
           }
         ]
