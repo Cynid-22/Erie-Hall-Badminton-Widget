@@ -1,18 +1,7 @@
 {
-  "last_updated": 1773582831,
+  "last_updated": 1773671015,
   "courts": {
     "Court 1": [
-      {
-        "date": "Sun, 15-Mar",
-        "slots": [
-          {
-            "start": "12:00",
-            "end": "23:00",
-            "duration_hours": 11,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Mon, 16-Mar",
         "slots": [
@@ -156,20 +145,20 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Sun, 15-Mar",
+        "date": "Sun, 22-Mar",
         "slots": [
           {
-            "start": "12:00",
+            "start": "13:00",
             "end": "23:00",
-            "duration_hours": 11,
+            "duration_hours": 10.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Mon, 16-Mar",
         "slots": [
@@ -271,26 +260,20 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Sun, 15-Mar",
+        "date": "Sun, 22-Mar",
         "slots": [
           {
             "start": "12:00",
-            "end": "14:30",
-            "duration_hours": 2.5,
-            "note": "Open"
-          },
-          {
-            "start": "18:30",
             "end": "23:00",
-            "duration_hours": 4.5,
+            "duration_hours": 11,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Mon, 16-Mar",
         "slots": [
@@ -413,6 +396,23 @@
             "start": "17:00",
             "end": "22:00",
             "duration_hours": 5.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sun, 22-Mar",
+        "slots": [
+          {
+            "start": "12:00",
+            "end": "14:30",
+            "duration_hours": 2.5,
+            "note": "Open"
+          },
+          {
+            "start": "18:30",
+            "end": "23:00",
+            "duration_hours": 4.5,
             "note": "Open"
           }
         ]
