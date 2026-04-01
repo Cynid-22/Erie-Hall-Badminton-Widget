@@ -1,36 +1,7 @@
 {
-  "last_updated": 1774968081,
+  "last_updated": 1775054662,
   "courts": {
     "Court 1": [
-      {
-        "date": "Tue, 31-Mar",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "09:05",
-            "duration_hours": 3.1,
-            "note": "Open"
-          },
-          {
-            "start": "10:20",
-            "end": "15:30",
-            "duration_hours": 5.2,
-            "note": "Open"
-          },
-          {
-            "start": "18:00",
-            "end": "20:00",
-            "duration_hours": 2.0,
-            "note": "Open"
-          },
-          {
-            "start": "22:00",
-            "end": "23:00",
-            "duration_hours": 1.0,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Wed, 01-Apr",
         "slots": [
@@ -88,8 +59,14 @@
           },
           {
             "start": "12:05",
+            "end": "15:30",
+            "duration_hours": 3.4,
+            "note": "Open"
+          },
+          {
+            "start": "16:30",
             "end": "22:00",
-            "duration_hours": 9.9,
+            "duration_hours": 5.5,
             "note": "Open"
           }
         ]
@@ -144,39 +121,45 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Tue, 31-Mar",
+        "date": "Tue, 07-Apr",
         "slots": [
           {
             "start": "06:00",
-            "end": "15:30",
-            "duration_hours": 9.5,
+            "end": "09:05",
+            "duration_hours": 3.1,
             "note": "Open"
           },
           {
-            "start": "18:00",
+            "start": "10:20",
+            "end": "20:00",
+            "duration_hours": 9.7,
+            "note": "Open"
+          },
+          {
+            "start": "22:00",
             "end": "23:00",
-            "duration_hours": 5.0,
+            "duration_hours": 1.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Wed, 01-Apr",
         "slots": [
           {
             "start": "06:00",
-            "end": "11:00",
-            "duration_hours": 5.0,
+            "end": "11:30",
+            "duration_hours": 5.5,
             "note": "Open"
           },
           {
-            "start": "12:00",
+            "start": "16:30",
             "end": "20:00",
-            "duration_hours": 8.0,
+            "duration_hours": 3.5,
             "note": "Open"
           },
           {
@@ -198,8 +181,14 @@
           },
           {
             "start": "14:30",
+            "end": "15:30",
+            "duration_hours": 1.0,
+            "note": "Open"
+          },
+          {
+            "start": "17:30",
             "end": "23:00",
-            "duration_hours": 8.5,
+            "duration_hours": 5.5,
             "note": "Open"
           }
         ]
@@ -209,8 +198,14 @@
         "slots": [
           {
             "start": "06:00",
+            "end": "15:30",
+            "duration_hours": 9.5,
+            "note": "Open"
+          },
+          {
+            "start": "17:30",
             "end": "22:00",
-            "duration_hours": 16,
+            "duration_hours": 4.5,
             "note": "Open"
           }
         ]
@@ -253,45 +248,39 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Tue, 31-Mar",
+        "date": "Tue, 07-Apr",
         "slots": [
           {
             "start": "06:00",
-            "end": "15:30",
-            "duration_hours": 9.5,
-            "note": "Open"
-          },
-          {
-            "start": "18:00",
-            "end": "19:00",
-            "duration_hours": 1.0,
-            "note": "Open"
-          },
-          {
-            "start": "19:00",
             "end": "20:00",
-            "duration_hours": 1.0,
-            "note": "Badminton Club"
+            "duration_hours": 14.0,
+            "note": "Open"
           },
           {
-            "start": "20:00",
+            "start": "22:00",
             "end": "23:00",
-            "duration_hours": 3.0,
+            "duration_hours": 1.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Wed, 01-Apr",
         "slots": [
           {
             "start": "06:00",
-            "end": "17:30",
-            "duration_hours": 11.5,
+            "end": "14:30",
+            "duration_hours": 8.5,
+            "note": "Open"
+          },
+          {
+            "start": "16:30",
+            "end": "18:30",
+            "duration_hours": 2.0,
             "note": "Open"
           }
         ]
@@ -301,8 +290,14 @@
         "slots": [
           {
             "start": "06:00",
+            "end": "15:30",
+            "duration_hours": 9.5,
+            "note": "Open"
+          },
+          {
+            "start": "17:30",
             "end": "18:30",
-            "duration_hours": 12.5,
+            "duration_hours": 1.0,
             "note": "Open"
           },
           {
@@ -318,8 +313,8 @@
         "slots": [
           {
             "start": "06:00",
-            "end": "17:30",
-            "duration_hours": 11.5,
+            "end": "15:30",
+            "duration_hours": 9.5,
             "note": "Open"
           },
           {
@@ -383,6 +378,29 @@
             "start": "20:00",
             "end": "23:00",
             "duration_hours": 3.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Tue, 07-Apr",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "19:00",
+            "duration_hours": 13.0,
+            "note": "Open"
+          },
+          {
+            "start": "19:00",
+            "end": "20:00",
+            "duration_hours": 1.0,
+            "note": "Badminton Club"
+          },
+          {
+            "start": "22:00",
+            "end": "23:00",
+            "duration_hours": 1.0,
             "note": "Open"
           }
         ]
