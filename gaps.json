@@ -1,30 +1,7 @@
 {
-  "last_updated": 1775659698,
+  "last_updated": 1775746711,
   "courts": {
     "Court 1": [
-      {
-        "date": "Wed, 08-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "09:05",
-            "duration_hours": 3.1,
-            "note": "Open"
-          },
-          {
-            "start": "09:54",
-            "end": "11:15",
-            "duration_hours": 1.3,
-            "note": "Open"
-          },
-          {
-            "start": "12:05",
-            "end": "17:30",
-            "duration_hours": 5.4,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Thu, 09-Apr",
         "slots": [
@@ -126,32 +103,20 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Wed, 08-Apr",
+        "date": "Wed, 15-Apr",
         "slots": [
           {
             "start": "06:00",
-            "end": "11:00",
-            "duration_hours": 5.0,
-            "note": "Open"
-          },
-          {
-            "start": "12:00",
-            "end": "17:30",
-            "duration_hours": 5.5,
-            "note": "Open"
-          },
-          {
-            "start": "22:00",
             "end": "23:00",
-            "duration_hours": 1.0,
+            "duration_hours": 17,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Thu, 09-Apr",
         "slots": [
@@ -223,20 +188,26 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Wed, 08-Apr",
+        "date": "Wed, 15-Apr",
         "slots": [
           {
             "start": "06:00",
-            "end": "17:30",
-            "duration_hours": 11.5,
+            "end": "20:00",
+            "duration_hours": 14.0,
+            "note": "Open"
+          },
+          {
+            "start": "22:00",
+            "end": "23:00",
+            "duration_hours": 1.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Thu, 09-Apr",
         "slots": [
@@ -335,6 +306,17 @@
             "start": "20:00",
             "end": "23:00",
             "duration_hours": 3.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Wed, 15-Apr",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
             "note": "Open"
           }
         ]
