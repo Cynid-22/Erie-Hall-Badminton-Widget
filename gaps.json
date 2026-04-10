@@ -1,30 +1,7 @@
 {
-  "last_updated": 1775746711,
+  "last_updated": 1775830751,
   "courts": {
     "Court 1": [
-      {
-        "date": "Thu, 09-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "09:05",
-            "duration_hours": 3.1,
-            "note": "Open"
-          },
-          {
-            "start": "10:20",
-            "end": "18:30",
-            "duration_hours": 8.2,
-            "note": "Open"
-          },
-          {
-            "start": "19:30",
-            "end": "23:00",
-            "duration_hours": 3.5,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Fri, 10-Apr",
         "slots": [
@@ -114,11 +91,9 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Thu, 09-Apr",
+        "date": "Thu, 16-Apr",
         "slots": [
           {
             "start": "06:00",
@@ -127,7 +102,9 @@
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Fri, 10-Apr",
         "slots": [
@@ -205,26 +182,20 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Thu, 09-Apr",
+        "date": "Thu, 16-Apr",
         "slots": [
           {
             "start": "06:00",
-            "end": "18:30",
-            "duration_hours": 12.5,
-            "note": "Open"
-          },
-          {
-            "start": "19:30",
             "end": "23:00",
-            "duration_hours": 3.5,
+            "duration_hours": 17,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Fri, 10-Apr",
         "slots": [
@@ -312,6 +283,17 @@
       },
       {
         "date": "Wed, 15-Apr",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Thu, 16-Apr",
         "slots": [
           {
             "start": "06:00",
