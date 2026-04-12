@@ -1,24 +1,7 @@
 {
-  "last_updated": 1775915986,
+  "last_updated": 1776002562,
   "courts": {
     "Court 1": [
-      {
-        "date": "Sat, 11-Apr",
-        "slots": [
-          {
-            "start": "10:00",
-            "end": "17:00",
-            "duration_hours": 7.0,
-            "note": "Open"
-          },
-          {
-            "start": "19:00",
-            "end": "22:00",
-            "duration_hours": 3.0,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Sun, 12-Apr",
         "slots": [
@@ -90,26 +73,26 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Sat, 11-Apr",
+        "date": "Sat, 18-Apr",
         "slots": [
           {
             "start": "10:00",
-            "end": "14:30",
-            "duration_hours": 4.5,
+            "end": "17:00",
+            "duration_hours": 7.0,
             "note": "Open"
           },
           {
-            "start": "18:00",
+            "start": "19:00",
             "end": "22:00",
-            "duration_hours": 4.0,
+            "duration_hours": 3.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Sun, 12-Apr",
         "slots": [
@@ -181,26 +164,26 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Sat, 11-Apr",
+        "date": "Sat, 18-Apr",
         "slots": [
           {
             "start": "10:00",
-            "end": "14:30",
-            "duration_hours": 4.5,
+            "end": "15:00",
+            "duration_hours": 5.0,
             "note": "Open"
           },
           {
-            "start": "18:00",
+            "start": "19:00",
             "end": "22:00",
-            "duration_hours": 4.0,
+            "duration_hours": 3.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Sun, 12-Apr",
         "slots": [
@@ -287,6 +270,23 @@
             "start": "06:00",
             "end": "22:00",
             "duration_hours": 16,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sat, 18-Apr",
+        "slots": [
+          {
+            "start": "10:00",
+            "end": "15:00",
+            "duration_hours": 5.0,
+            "note": "Open"
+          },
+          {
+            "start": "19:00",
+            "end": "22:00",
+            "duration_hours": 3.0,
             "note": "Open"
           }
         ]
