@@ -1,25 +1,20 @@
 {
-  "last_updated": 1776092089,
+  "last_updated": 1776178557,
   "courts": {
     "Court 1": [
-      {
-        "date": "Mon, 13-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "23:00",
-            "duration_hours": 17,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Tue, 14-Apr",
         "slots": [
           {
             "start": "06:00",
+            "end": "15:45",
+            "duration_hours": 9.8,
+            "note": "Open"
+          },
+          {
+            "start": "17:30",
             "end": "20:00",
-            "duration_hours": 14.0,
+            "duration_hours": 2.5,
             "note": "Open"
           },
           {
@@ -90,11 +85,9 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
+      },
       {
-        "date": "Mon, 13-Apr",
+        "date": "Mon, 20-Apr",
         "slots": [
           {
             "start": "06:00",
@@ -103,14 +96,22 @@
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 2": [
       {
         "date": "Tue, 14-Apr",
         "slots": [
           {
             "start": "06:00",
+            "end": "15:45",
+            "duration_hours": 9.8,
+            "note": "Open"
+          },
+          {
+            "start": "17:30",
             "end": "23:00",
-            "duration_hours": 17,
+            "duration_hours": 5.5,
             "note": "Open"
           }
         ]
@@ -176,8 +177,25 @@
         "slots": [
           {
             "start": "12:00",
+            "end": "14:30",
+            "duration_hours": 2.5,
+            "note": "Open"
+          },
+          {
+            "start": "16:30",
             "end": "23:00",
-            "duration_hours": 11,
+            "duration_hours": 6.5,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Mon, 20-Apr",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
             "note": "Open"
           }
         ]
@@ -185,35 +203,18 @@
     ],
     "Court 3": [
       {
-        "date": "Mon, 13-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "19:00",
-            "duration_hours": 13.0,
-            "note": "Open"
-          },
-          {
-            "start": "19:00",
-            "end": "20:00",
-            "duration_hours": 1.0,
-            "note": "Badminton Club"
-          },
-          {
-            "start": "20:00",
-            "end": "23:00",
-            "duration_hours": 3.0,
-            "note": "Open"
-          }
-        ]
-      },
-      {
         "date": "Tue, 14-Apr",
         "slots": [
           {
             "start": "06:00",
+            "end": "15:45",
+            "duration_hours": 9.8,
+            "note": "Open"
+          },
+          {
+            "start": "17:30",
             "end": "19:00",
-            "duration_hours": 13.0,
+            "duration_hours": 1.5,
             "note": "Open"
           },
           {
@@ -285,8 +286,37 @@
         "slots": [
           {
             "start": "12:00",
+            "end": "14:30",
+            "duration_hours": 2.5,
+            "note": "Open"
+          },
+          {
+            "start": "16:30",
             "end": "23:00",
-            "duration_hours": 11,
+            "duration_hours": 6.5,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Mon, 20-Apr",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "19:00",
+            "duration_hours": 13.0,
+            "note": "Open"
+          },
+          {
+            "start": "19:00",
+            "end": "20:00",
+            "duration_hours": 1.0,
+            "note": "Badminton Club"
+          },
+          {
+            "start": "20:00",
+            "end": "23:00",
+            "duration_hours": 3.0,
             "note": "Open"
           }
         ]
