@@ -1,37 +1,20 @@
 {
-  "last_updated": 1776178557,
+  "last_updated": 1776264570,
   "courts": {
     "Court 1": [
-      {
-        "date": "Tue, 14-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "15:45",
-            "duration_hours": 9.8,
-            "note": "Open"
-          },
-          {
-            "start": "17:30",
-            "end": "20:00",
-            "duration_hours": 2.5,
-            "note": "Open"
-          },
-          {
-            "start": "22:00",
-            "end": "23:00",
-            "duration_hours": 1.0,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Wed, 15-Apr",
         "slots": [
           {
             "start": "06:00",
+            "end": "11:00",
+            "duration_hours": 5.0,
+            "note": "Open"
+          },
+          {
+            "start": "18:00",
             "end": "23:00",
-            "duration_hours": 17,
+            "duration_hours": 5.0,
             "note": "Open"
           }
         ]
@@ -41,8 +24,14 @@
         "slots": [
           {
             "start": "06:00",
+            "end": "17:30",
+            "duration_hours": 11.5,
+            "note": "Open"
+          },
+          {
+            "start": "19:30",
             "end": "23:00",
-            "duration_hours": 17,
+            "duration_hours": 3.5,
             "note": "Open"
           }
         ]
@@ -52,8 +41,14 @@
         "slots": [
           {
             "start": "06:00",
+            "end": "15:30",
+            "duration_hours": 9.5,
+            "note": "Open"
+          },
+          {
+            "start": "19:00",
             "end": "22:00",
-            "duration_hours": 16,
+            "duration_hours": 3.0,
             "note": "Open"
           }
         ]
@@ -96,33 +91,39 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 2": [
-      {
-        "date": "Tue, 14-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "15:45",
-            "duration_hours": 9.8,
-            "note": "Open"
-          },
-          {
-            "start": "17:30",
-            "end": "23:00",
-            "duration_hours": 5.5,
-            "note": "Open"
-          }
-        ]
       },
       {
-        "date": "Wed, 15-Apr",
+        "date": "Tue, 21-Apr",
         "slots": [
           {
             "start": "06:00",
             "end": "20:00",
             "duration_hours": 14.0,
+            "note": "Open"
+          },
+          {
+            "start": "22:00",
+            "end": "23:00",
+            "duration_hours": 1.0,
+            "note": "Open"
+          }
+        ]
+      }
+    ],
+    "Court 2": [
+      {
+        "date": "Wed, 15-Apr",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "14:30",
+            "duration_hours": 8.5,
+            "note": "Open"
+          },
+          {
+            "start": "18:00",
+            "end": "20:00",
+            "duration_hours": 2.0,
             "note": "Open"
           },
           {
@@ -138,8 +139,14 @@
         "slots": [
           {
             "start": "06:00",
+            "end": "15:30",
+            "duration_hours": 9.5,
+            "note": "Open"
+          },
+          {
+            "start": "19:30",
             "end": "23:00",
-            "duration_hours": 17,
+            "duration_hours": 3.5,
             "note": "Open"
           }
         ]
@@ -149,8 +156,14 @@
         "slots": [
           {
             "start": "06:00",
+            "end": "15:30",
+            "duration_hours": 9.5,
+            "note": "Open"
+          },
+          {
+            "start": "19:00",
             "end": "22:00",
-            "duration_hours": 16,
+            "duration_hours": 3.0,
             "note": "Open"
           }
         ]
@@ -199,22 +212,112 @@
             "note": "Open"
           }
         ]
+      },
+      {
+        "date": "Tue, 21-Apr",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
+            "note": "Open"
+          }
+        ]
       }
     ],
     "Court 3": [
       {
-        "date": "Tue, 14-Apr",
+        "date": "Wed, 15-Apr",
         "slots": [
           {
             "start": "06:00",
-            "end": "15:45",
-            "duration_hours": 9.8,
+            "end": "14:30",
+            "duration_hours": 8.5,
             "note": "Open"
           },
           {
-            "start": "17:30",
+            "start": "18:00",
+            "end": "23:00",
+            "duration_hours": 5.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Thu, 16-Apr",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "15:30",
+            "duration_hours": 9.5,
+            "note": "Open"
+          },
+          {
+            "start": "19:30",
+            "end": "23:00",
+            "duration_hours": 3.5,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Fri, 17-Apr",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "15:30",
+            "duration_hours": 9.5,
+            "note": "Open"
+          },
+          {
+            "start": "19:00",
+            "end": "22:00",
+            "duration_hours": 3.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sat, 18-Apr",
+        "slots": [
+          {
+            "start": "10:00",
+            "end": "15:00",
+            "duration_hours": 5.0,
+            "note": "Open"
+          },
+          {
+            "start": "19:00",
+            "end": "22:00",
+            "duration_hours": 3.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sun, 19-Apr",
+        "slots": [
+          {
+            "start": "12:00",
+            "end": "14:30",
+            "duration_hours": 2.5,
+            "note": "Open"
+          },
+          {
+            "start": "16:30",
+            "end": "23:00",
+            "duration_hours": 6.5,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Mon, 20-Apr",
+        "slots": [
+          {
+            "start": "06:00",
             "end": "19:00",
-            "duration_hours": 1.5,
+            "duration_hours": 13.0,
             "note": "Open"
           },
           {
@@ -232,74 +335,7 @@
         ]
       },
       {
-        "date": "Wed, 15-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "23:00",
-            "duration_hours": 17,
-            "note": "Open"
-          }
-        ]
-      },
-      {
-        "date": "Thu, 16-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "23:00",
-            "duration_hours": 17,
-            "note": "Open"
-          }
-        ]
-      },
-      {
-        "date": "Fri, 17-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "22:00",
-            "duration_hours": 16,
-            "note": "Open"
-          }
-        ]
-      },
-      {
-        "date": "Sat, 18-Apr",
-        "slots": [
-          {
-            "start": "10:00",
-            "end": "15:00",
-            "duration_hours": 5.0,
-            "note": "Open"
-          },
-          {
-            "start": "19:00",
-            "end": "22:00",
-            "duration_hours": 3.0,
-            "note": "Open"
-          }
-        ]
-      },
-      {
-        "date": "Sun, 19-Apr",
-        "slots": [
-          {
-            "start": "12:00",
-            "end": "14:30",
-            "duration_hours": 2.5,
-            "note": "Open"
-          },
-          {
-            "start": "16:30",
-            "end": "23:00",
-            "duration_hours": 6.5,
-            "note": "Open"
-          }
-        ]
-      },
-      {
-        "date": "Mon, 20-Apr",
+        "date": "Tue, 21-Apr",
         "slots": [
           {
             "start": "06:00",
