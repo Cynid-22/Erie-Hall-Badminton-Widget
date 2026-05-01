@@ -1,18 +1,7 @@
 {
-  "last_updated": 1777562406,
+  "last_updated": 1777645180,
   "courts": {
     "Court 1": [
-      {
-        "date": "Thu, 30-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "23:00",
-            "duration_hours": 17,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Fri, 01-May",
         "slots": [
@@ -70,6 +59,17 @@
       },
       {
         "date": "Wed, 06-May",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Thu, 07-May",
         "slots": [
           {
             "start": "06:00",
@@ -82,17 +82,6 @@
     ],
     "Court 2": [
       {
-        "date": "Thu, 30-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "23:00",
-            "duration_hours": 17,
-            "note": "Open"
-          }
-        ]
-      },
-      {
         "date": "Fri, 01-May",
         "slots": [
           {
@@ -149,6 +138,17 @@
       },
       {
         "date": "Wed, 06-May",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Thu, 07-May",
         "slots": [
           {
             "start": "06:00",
@@ -161,17 +161,6 @@
     ],
     "Court 3": [
       {
-        "date": "Thu, 30-Apr",
-        "slots": [
-          {
-            "start": "06:00",
-            "end": "23:00",
-            "duration_hours": 17,
-            "note": "Open"
-          }
-        ]
-      },
-      {
         "date": "Fri, 01-May",
         "slots": [
           {
@@ -228,6 +217,17 @@
       },
       {
         "date": "Wed, 06-May",
+        "slots": [
+          {
+            "start": "06:00",
+            "end": "23:00",
+            "duration_hours": 17,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Thu, 07-May",
         "slots": [
           {
             "start": "06:00",
