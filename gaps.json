@@ -1,18 +1,7 @@
 {
-  "last_updated": 1777731162,
+  "last_updated": 1777817648,
   "courts": {
     "Court 1": [
-      {
-        "date": "Sat, 02-May",
-        "slots": [
-          {
-            "start": "10:00",
-            "end": "22:00",
-            "duration_hours": 12,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Sun, 03-May",
         "slots": [
@@ -75,6 +64,23 @@
             "start": "06:00",
             "end": "12:00",
             "duration_hours": 6.0,
+            "note": "Open"
+          },
+          {
+            "start": "15:00",
+            "end": "22:00",
+            "duration_hours": 7.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sat, 09-May",
+        "slots": [
+          {
+            "start": "10:00",
+            "end": "12:00",
+            "duration_hours": 2.0,
             "note": "Open"
           },
           {
@@ -88,17 +94,6 @@
     ],
     "Court 2": [
       {
-        "date": "Sat, 02-May",
-        "slots": [
-          {
-            "start": "10:00",
-            "end": "22:00",
-            "duration_hours": 12,
-            "note": "Open"
-          }
-        ]
-      },
-      {
         "date": "Sun, 03-May",
         "slots": [
           {
@@ -169,20 +164,26 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Sat, 02-May",
+        "date": "Sat, 09-May",
         "slots": [
           {
             "start": "10:00",
+            "end": "12:00",
+            "duration_hours": 2.0,
+            "note": "Open"
+          },
+          {
+            "start": "15:00",
             "end": "22:00",
-            "duration_hours": 12,
+            "duration_hours": 7.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Sun, 03-May",
         "slots": [
@@ -245,6 +246,17 @@
             "start": "06:00",
             "end": "22:00",
             "duration_hours": 16,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sat, 09-May",
+        "slots": [
+          {
+            "start": "10:00",
+            "end": "22:00",
+            "duration_hours": 12,
             "note": "Open"
           }
         ]
