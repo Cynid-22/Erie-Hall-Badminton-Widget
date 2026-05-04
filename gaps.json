@@ -1,18 +1,7 @@
 {
-  "last_updated": 1777817648,
+  "last_updated": 1777907768,
   "courts": {
     "Court 1": [
-      {
-        "date": "Sun, 03-May",
-        "slots": [
-          {
-            "start": "12:00",
-            "end": "23:00",
-            "duration_hours": 11,
-            "note": "Open"
-          }
-        ]
-      },
       {
         "date": "Mon, 04-May",
         "slots": [
@@ -87,6 +76,17 @@
             "start": "15:00",
             "end": "22:00",
             "duration_hours": 7.0,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sun, 10-May",
+        "slots": [
+          {
+            "start": "15:00",
+            "end": "23:00",
+            "duration_hours": 8.0,
             "note": "Open"
           }
         ]
@@ -94,17 +94,6 @@
     ],
     "Court 2": [
       {
-        "date": "Sun, 03-May",
-        "slots": [
-          {
-            "start": "12:00",
-            "end": "23:00",
-            "duration_hours": 11,
-            "note": "Open"
-          }
-        ]
-      },
-      {
         "date": "Mon, 04-May",
         "slots": [
           {
@@ -181,20 +170,20 @@
             "note": "Open"
           }
         ]
-      }
-    ],
-    "Court 3": [
+      },
       {
-        "date": "Sun, 03-May",
+        "date": "Sun, 10-May",
         "slots": [
           {
-            "start": "12:00",
+            "start": "15:00",
             "end": "23:00",
-            "duration_hours": 11,
+            "duration_hours": 8.0,
             "note": "Open"
           }
         ]
-      },
+      }
+    ],
+    "Court 3": [
       {
         "date": "Mon, 04-May",
         "slots": [
@@ -257,6 +246,17 @@
             "start": "10:00",
             "end": "22:00",
             "duration_hours": 12,
+            "note": "Open"
+          }
+        ]
+      },
+      {
+        "date": "Sun, 10-May",
+        "slots": [
+          {
+            "start": "12:00",
+            "end": "23:00",
+            "duration_hours": 11,
             "note": "Open"
           }
         ]
